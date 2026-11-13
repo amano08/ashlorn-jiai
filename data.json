@@ -1,0 +1,3057 @@
+{
+  "generatedFor": "2026-11-13",
+  "patterns": [
+    {
+      "id": "sq-week",
+      "name": "SQ週・メジャーSQ",
+      "category": "event",
+      "kind": "売り買いの偏り",
+      "level": "大",
+      "basis": "経験則",
+      "note": "先物・オプション（将来の値段を今決めて売り買いする取引）の締め切りに合わせた売り買いで、市場全体の数字が普段と違う動きをしやすい。締め切りの日（SQ日）の朝いちばんの値段は、とくに売り買いの偏りが出やすい",
+      "periodText": "毎月第2金曜日が締め切りの日（SQ日）。その5日前から当日まで。とくに前日〜当日。3・6・9・12月は先物とオプション両方の締め切りが重なる『メジャーSQ』で、偏りが大きくなりやすい",
+      "sectors": [
+        "市場全体"
+      ],
+      "gloss": "先物・オプションの締め切りの週",
+      "eventDateNote": "今月は 11月13日（金）"
+    },
+    {
+      "id": "mega-earnings",
+      "name": "大型個別決算 (エヌビディア型)",
+      "category": "event",
+      "kind": "振れやすい",
+      "level": "中",
+      "basis": "経験則",
+      "note": "とても大きい会社1社の成績発表と今後の見通しで、半導体・AI関係の株全体と、市場全体の空気が決まることがある。日本の関係する株の、朝いちばんの値段に直接つながる",
+      "periodText": "その会社の発表の前日〜翌日（発表は日本時間の未明）",
+      "sectors": [
+        "電気機器",
+        "精密機器",
+        "機械"
+      ],
+      "eventDateNote": "事例：11月17日（火）（エヌビディア決算）"
+    },
+    {
+      "id": "earnings-season",
+      "name": "決算シーズン",
+      "category": "event",
+      "kind": "振れやすい",
+      "level": "大",
+      "basis": "経験則",
+      "note": "会社の成績発表が、1日に何百社も重なる時期。良い発表・悪い発表が、市場全体の数字や同じ種類の会社（同じ業種）の値段に伝わりやすく、その日の最初につく値段（寄り付き）が大きく開きやすい",
+      "periodText": "会社の成績発表が重なる時期は年4回。1月下旬〜2月中旬／4月下旬〜5月中旬／7月下旬〜8月中旬／10月下旬〜11月中旬で、とくに発表が一番重なる日が山場",
+      "sectors": [
+        "市場全体"
+      ],
+      "eventDateNote": "発表が特に重なるのは 11月5日〜13日"
+    },
+    {
+      "id": "halloween",
+      "name": "ハロウィン効果",
+      "category": "monthly",
+      "kind": "追い風",
+      "level": "中",
+      "basis": "統計",
+      "note": "アメリカの集計では、冬の半年間（11〜4月）が夏の半年間より強かった。セルインメイ（夏に離れる格言）と裏表の関係で、日本ではアメリカの影響が伝わってくるものとして見る型",
+      "periodText": "10月の終わり〜4月の終わり。半年間ずっと",
+      "sectors": [
+        "市場全体"
+      ]
+    },
+    {
+      "id": "midterm-cycle",
+      "name": "中間選挙年サイクル",
+      "category": "cycle",
+      "kind": "追い風",
+      "level": "中",
+      "basis": "統計",
+      "note": "中間選挙の後の12か月は、過去20回すべてプラスだったというアメリカの集計。アメリカの株が底を打つ（下がりきる）時期を読む材料",
+      "periodText": "中間選挙（11月上旬）の後の12か月。選挙の前の秋は、下げが深くなりやすい年でもあった",
+      "sectors": [
+        "市場全体"
+      ]
+    },
+    {
+      "id": "us-cpi",
+      "name": "米CPI",
+      "category": "event",
+      "kind": "振れやすい",
+      "level": "中",
+      "basis": "経験則",
+      "note": "予想とどれだけ違ったかで金利の見通しが動き、アメリカの株と円の値段が動く。翌日の朝は、金利の動きで値段が変わりやすい成長株や半導体の株に先に表れやすい（まだ確かめていない当てはめ）",
+      "periodText": "発表は毎月の夜。影響は次の取引日の朝いちばん",
+      "sectors": [
+        "電気機器",
+        "情報・通信業",
+        "精密機器",
+        "市場全体"
+      ],
+      "gloss": "アメリカの物価の発表",
+      "eventDateNote": "直近の日付：11月10日（火）"
+    },
+    {
+      "id": "earnings-cross",
+      "name": "決算跨ぎと出尽くし",
+      "category": "event",
+      "kind": "振れやすい",
+      "level": "中",
+      "basis": "経験則",
+      "note": "期待されて買われていた株は、良い成績が出ても『良い知らせは出きった』と売られることがある。値段が動いた後の説明に使う型",
+      "periodText": "決算の発表が重なる時期（年4回・2月／5月／8月／11月ごろ）と、各社の発表の2日後まで",
+      "sectors": [
+        "市場全体"
+      ],
+      "gloss": "発表をまたいで持つこと／良い知らせが出きった状態",
+      "eventDateNote": "発表が特に重なるのは 11月5日〜13日"
+    },
+    {
+      "id": "november-earnings-us",
+      "name": "11月・決算の山と米選挙の境目",
+      "category": "monthly",
+      "kind": "振れやすい",
+      "level": "中",
+      "basis": "経験則",
+      "note": "会社の成績発表が重なる時期と、アメリカの選挙が終わる時期が重なる月。会社ごとの知らせで、市場全体の数字（指数）が引っ張られやすい",
+      "periodText": "11月上旬〜中旬。中でも会社の成績発表が重なる日々に目立つ",
+      "sectors": [
+        "市場全体"
+      ]
+    },
+    {
+      "id": "presidential-cycle",
+      "name": "米大統領サイクル",
+      "category": "cycle",
+      "kind": "年単位の背景",
+      "level": "小",
+      "basis": "統計",
+      "note": "アメリカの集計では、大統領の任期3年目が一番強く、2年目が一番弱い並びだった。年単位の大きな流れとして置くもので、毎日の売買の判断には使わない",
+      "periodText": "1年を通して（年単位の大きな流れ）",
+      "sectors": [
+        "市場全体"
+      ]
+    },
+    {
+      "id": "midterm-2018-analogy",
+      "name": "2018年との類推 (中間選挙年)",
+      "category": "cycle",
+      "kind": "年単位の背景",
+      "level": "小",
+      "basis": "眉唾",
+      "note": "2018年の値動きのたどり方を、今年になぞらえてみる話。数字で確かめたものではなく、物語として片隅に置くもの",
+      "periodText": "中間選挙の年（4年に1回。2026年がその年）の秋〜年末",
+      "sectors": [
+        "市場全体"
+      ]
+    },
+    {
+      "id": "eto-anomaly",
+      "name": "干支アノマリー",
+      "category": "cycle",
+      "kind": "年単位の背景",
+      "level": "小",
+      "basis": "眉唾",
+      "note": "干支で相場を読む言い伝え。判断には一切入れないと線を引くために置いてある項目",
+      "periodText": "1年を通して（その年の干支）",
+      "sectors": [
+        "市場全体"
+      ],
+      "gloss": "理由ははっきりしないけれど起きやすいと言われる偏り"
+    }
+  ],
+  "allPatterns": [
+    {
+      "id": "fomc",
+      "name": "FOMC",
+      "level": "大",
+      "basis": "経験則",
+      "kind": "振れやすい",
+      "category": "event",
+      "sectors": [
+        "銀行業",
+        "保険業",
+        "不動産業",
+        "電気機器",
+        "市場全体"
+      ]
+    },
+    {
+      "id": "sq-week",
+      "name": "SQ週・メジャーSQ",
+      "level": "大",
+      "basis": "経験則",
+      "kind": "売り買いの偏り",
+      "category": "event",
+      "sectors": [
+        "市場全体"
+      ]
+    },
+    {
+      "id": "ex-dividend",
+      "name": "配当権利落ち",
+      "level": "大",
+      "basis": "経験則",
+      "kind": "売り買いの偏り",
+      "category": "event",
+      "sectors": [
+        "電気・ガス業",
+        "銀行業",
+        "保険業",
+        "海運業",
+        "卸売業",
+        "鉄鋼",
+        "市場全体"
+      ]
+    },
+    {
+      "id": "mega-earnings",
+      "name": "大型個別決算 (エヌビディア型)",
+      "level": "大",
+      "basis": "経験則",
+      "kind": "振れやすい",
+      "category": "event",
+      "sectors": [
+        "電気機器",
+        "精密機器",
+        "機械"
+      ]
+    },
+    {
+      "id": "earnings-season",
+      "name": "決算シーズン",
+      "level": "大",
+      "basis": "経験則",
+      "kind": "振れやすい",
+      "category": "event",
+      "sectors": [
+        "市場全体"
+      ]
+    },
+    {
+      "id": "jan-effect",
+      "name": "1月効果",
+      "level": "中",
+      "basis": "統計",
+      "kind": "追い風",
+      "category": "monthly",
+      "sectors": [
+        "市場全体",
+        "小売業"
+      ]
+    },
+    {
+      "id": "sell-in-may",
+      "name": "セルインメイ",
+      "level": "中",
+      "basis": "統計",
+      "kind": "向かい風",
+      "category": "monthly",
+      "sectors": [
+        "市場全体"
+      ]
+    },
+    {
+      "id": "halloween",
+      "name": "ハロウィン効果",
+      "level": "中",
+      "basis": "統計",
+      "kind": "追い風",
+      "category": "monthly",
+      "sectors": [
+        "市場全体"
+      ]
+    },
+    {
+      "id": "midterm-cycle",
+      "name": "中間選挙年サイクル",
+      "level": "中",
+      "basis": "統計",
+      "kind": "追い風",
+      "category": "cycle",
+      "sectors": [
+        "市場全体"
+      ]
+    },
+    {
+      "id": "boj-meeting",
+      "name": "日銀金融政策決定会合",
+      "level": "中",
+      "basis": "経験則",
+      "kind": "振れやすい",
+      "category": "event",
+      "sectors": [
+        "銀行業",
+        "保険業",
+        "不動産業",
+        "証券、商品先物取引業",
+        "市場全体"
+      ]
+    },
+    {
+      "id": "us-cpi",
+      "name": "米CPI",
+      "level": "中",
+      "basis": "経験則",
+      "kind": "振れやすい",
+      "category": "event",
+      "sectors": [
+        "電気機器",
+        "情報・通信業",
+        "精密機器",
+        "市場全体"
+      ]
+    },
+    {
+      "id": "us-employment",
+      "name": "米雇用統計",
+      "level": "中",
+      "basis": "経験則",
+      "kind": "振れやすい",
+      "category": "event",
+      "sectors": [
+        "市場全体"
+      ]
+    },
+    {
+      "id": "earnings-cross",
+      "name": "決算跨ぎと出尽くし",
+      "level": "中",
+      "basis": "経験則",
+      "kind": "振れやすい",
+      "category": "event",
+      "sectors": [
+        "市場全体"
+      ]
+    },
+    {
+      "id": "november-earnings-us",
+      "name": "11月・決算の山と米選挙の境目",
+      "level": "中",
+      "basis": "経験則",
+      "kind": "振れやすい",
+      "category": "monthly",
+      "sectors": [
+        "市場全体"
+      ]
+    },
+    {
+      "id": "september-rights",
+      "name": "9月・中間決算期末と権利集中",
+      "level": "中",
+      "basis": "経験則",
+      "kind": "売り買いの偏り",
+      "category": "monthly",
+      "sectors": [
+        "市場全体"
+      ]
+    },
+    {
+      "id": "tax-loss-selling",
+      "name": "年末の損出しと年始の買い戻し",
+      "level": "中",
+      "basis": "経験則",
+      "kind": "売り買いの偏り",
+      "category": "monthly",
+      "sectors": [
+        "市場全体"
+      ]
+    },
+    {
+      "id": "year-end-rally",
+      "name": "年末ラリー・掉尾の一振",
+      "level": "中",
+      "basis": "経験則",
+      "kind": "追い風",
+      "category": "monthly",
+      "sectors": [
+        "小売業",
+        "その他製品",
+        "市場全体"
+      ]
+    },
+    {
+      "id": "election-year",
+      "name": "大統領選挙年",
+      "level": "小",
+      "basis": "統計",
+      "kind": "年単位の背景",
+      "category": "cycle",
+      "sectors": [
+        "市場全体"
+      ]
+    },
+    {
+      "id": "presidential-cycle",
+      "name": "米大統領サイクル",
+      "level": "小",
+      "basis": "統計",
+      "kind": "年単位の背景",
+      "category": "cycle",
+      "sectors": [
+        "市場全体"
+      ]
+    },
+    {
+      "id": "new-fiscal-year",
+      "name": "4月・新年度入り",
+      "level": "小",
+      "basis": "経験則",
+      "kind": "追い風",
+      "category": "monthly",
+      "sectors": [
+        "市場全体",
+        "建設業"
+      ]
+    },
+    {
+      "id": "summer-thin",
+      "name": "夏枯れ・お盆の薄商い",
+      "level": "小",
+      "basis": "経験則",
+      "kind": "振れやすい",
+      "category": "monthly",
+      "sectors": [
+        "市場全体",
+        "電気・ガス業",
+        "食料品",
+        "電気機器",
+        "小売業"
+      ]
+    },
+    {
+      "id": "agm-summer",
+      "name": "株主総会集中・夏相場入り",
+      "level": "小",
+      "basis": "経験則",
+      "kind": "年単位の背景",
+      "category": "monthly",
+      "sectors": [
+        "市場全体",
+        "空運業",
+        "海運業",
+        "陸運業",
+        "サービス業"
+      ]
+    },
+    {
+      "id": "setsu-pehigan",
+      "name": "節分天井・彼岸底",
+      "level": "小",
+      "basis": "経験則",
+      "kind": "売り買いの偏り",
+      "category": "monthly",
+      "sectors": [
+        "市場全体",
+        "医薬品",
+        "小売業"
+      ]
+    },
+    {
+      "id": "midterm-2018-analogy",
+      "name": "2018年との類推 (中間選挙年)",
+      "level": "小",
+      "basis": "眉唾",
+      "kind": "年単位の背景",
+      "category": "cycle",
+      "sectors": [
+        "市場全体"
+      ]
+    },
+    {
+      "id": "eto-anomaly",
+      "name": "干支アノマリー",
+      "level": "小",
+      "basis": "眉唾",
+      "kind": "年単位の背景",
+      "category": "cycle",
+      "sectors": [
+        "市場全体"
+      ]
+    }
+  ],
+  "jun": {
+    "year": 2026,
+    "items": [
+      {
+        "month": 1,
+        "part": 0,
+        "label": "1月上旬",
+        "start": "2026-01-01",
+        "end": "2026-01-10",
+        "patternIds": [
+          "sq-week",
+          "jan-effect",
+          "halloween",
+          "midterm-cycle",
+          "us-employment",
+          "tax-loss-selling",
+          "presidential-cycle",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 1,
+        "part": 1,
+        "label": "1月中旬",
+        "start": "2026-01-11",
+        "end": "2026-01-20",
+        "patternIds": [
+          "jan-effect",
+          "halloween",
+          "midterm-cycle",
+          "us-cpi",
+          "tax-loss-selling",
+          "presidential-cycle",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 1,
+        "part": 2,
+        "label": "1月下旬",
+        "start": "2026-01-21",
+        "end": "2026-01-31",
+        "patternIds": [
+          "fomc",
+          "jan-effect",
+          "halloween",
+          "midterm-cycle",
+          "boj-meeting",
+          "tax-loss-selling",
+          "presidential-cycle",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 2,
+        "part": 0,
+        "label": "2月上旬",
+        "start": "2026-02-01",
+        "end": "2026-02-10",
+        "patternIds": [
+          "sq-week",
+          "earnings-season",
+          "halloween",
+          "midterm-cycle",
+          "earnings-cross",
+          "presidential-cycle",
+          "setsu-pehigan",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 2,
+        "part": 1,
+        "label": "2月中旬",
+        "start": "2026-02-11",
+        "end": "2026-02-20",
+        "patternIds": [
+          "sq-week",
+          "earnings-season",
+          "halloween",
+          "midterm-cycle",
+          "us-cpi",
+          "us-employment",
+          "earnings-cross",
+          "presidential-cycle",
+          "setsu-pehigan",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 2,
+        "part": 2,
+        "label": "2月下旬",
+        "start": "2026-02-21",
+        "end": "2026-02-28",
+        "patternIds": [
+          "halloween",
+          "midterm-cycle",
+          "presidential-cycle",
+          "setsu-pehigan",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 3,
+        "part": 0,
+        "label": "3月上旬",
+        "start": "2026-03-01",
+        "end": "2026-03-10",
+        "patternIds": [
+          "sq-week",
+          "halloween",
+          "midterm-cycle",
+          "us-employment",
+          "presidential-cycle",
+          "setsu-pehigan",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 3,
+        "part": 1,
+        "label": "3月中旬",
+        "start": "2026-03-11",
+        "end": "2026-03-20",
+        "patternIds": [
+          "fomc",
+          "sq-week",
+          "halloween",
+          "midterm-cycle",
+          "boj-meeting",
+          "us-cpi",
+          "presidential-cycle",
+          "setsu-pehigan",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 3,
+        "part": 2,
+        "label": "3月下旬",
+        "start": "2026-03-21",
+        "end": "2026-03-31",
+        "patternIds": [
+          "ex-dividend",
+          "halloween",
+          "midterm-cycle",
+          "presidential-cycle",
+          "setsu-pehigan",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 4,
+        "part": 0,
+        "label": "4月上旬",
+        "start": "2026-04-01",
+        "end": "2026-04-10",
+        "patternIds": [
+          "sq-week",
+          "halloween",
+          "midterm-cycle",
+          "us-cpi",
+          "us-employment",
+          "presidential-cycle",
+          "new-fiscal-year",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 4,
+        "part": 1,
+        "label": "4月中旬",
+        "start": "2026-04-11",
+        "end": "2026-04-20",
+        "patternIds": [
+          "halloween",
+          "midterm-cycle",
+          "us-cpi",
+          "presidential-cycle",
+          "new-fiscal-year",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 4,
+        "part": 2,
+        "label": "4月下旬",
+        "start": "2026-04-21",
+        "end": "2026-04-30",
+        "patternIds": [
+          "fomc",
+          "halloween",
+          "midterm-cycle",
+          "boj-meeting",
+          "presidential-cycle",
+          "new-fiscal-year",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 5,
+        "part": 0,
+        "label": "5月上旬",
+        "start": "2026-05-01",
+        "end": "2026-05-10",
+        "patternIds": [
+          "sq-week",
+          "earnings-season",
+          "sell-in-may",
+          "midterm-cycle",
+          "us-employment",
+          "earnings-cross",
+          "presidential-cycle",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 5,
+        "part": 1,
+        "label": "5月中旬",
+        "start": "2026-05-11",
+        "end": "2026-05-20",
+        "patternIds": [
+          "earnings-season",
+          "sell-in-may",
+          "midterm-cycle",
+          "us-cpi",
+          "earnings-cross",
+          "presidential-cycle",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 5,
+        "part": 2,
+        "label": "5月下旬",
+        "start": "2026-05-21",
+        "end": "2026-05-31",
+        "patternIds": [
+          "sell-in-may",
+          "midterm-cycle",
+          "presidential-cycle",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 6,
+        "part": 0,
+        "label": "6月上旬",
+        "start": "2026-06-01",
+        "end": "2026-06-10",
+        "patternIds": [
+          "sq-week",
+          "sell-in-may",
+          "midterm-cycle",
+          "us-cpi",
+          "us-employment",
+          "presidential-cycle",
+          "agm-summer",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 6,
+        "part": 1,
+        "label": "6月中旬",
+        "start": "2026-06-11",
+        "end": "2026-06-20",
+        "patternIds": [
+          "fomc",
+          "sq-week",
+          "sell-in-may",
+          "midterm-cycle",
+          "boj-meeting",
+          "us-cpi",
+          "presidential-cycle",
+          "agm-summer",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 6,
+        "part": 2,
+        "label": "6月下旬",
+        "start": "2026-06-21",
+        "end": "2026-06-30",
+        "patternIds": [
+          "sell-in-may",
+          "midterm-cycle",
+          "presidential-cycle",
+          "agm-summer",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 7,
+        "part": 0,
+        "label": "7月上旬",
+        "start": "2026-07-01",
+        "end": "2026-07-10",
+        "patternIds": [
+          "sq-week",
+          "sell-in-may",
+          "midterm-cycle",
+          "us-employment",
+          "presidential-cycle",
+          "summer-thin",
+          "agm-summer",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 7,
+        "part": 1,
+        "label": "7月中旬",
+        "start": "2026-07-11",
+        "end": "2026-07-20",
+        "patternIds": [
+          "sell-in-may",
+          "midterm-cycle",
+          "us-cpi",
+          "presidential-cycle",
+          "summer-thin",
+          "agm-summer",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 7,
+        "part": 2,
+        "label": "7月下旬",
+        "start": "2026-07-21",
+        "end": "2026-07-31",
+        "patternIds": [
+          "fomc",
+          "sell-in-may",
+          "midterm-cycle",
+          "boj-meeting",
+          "presidential-cycle",
+          "summer-thin",
+          "agm-summer",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 8,
+        "part": 0,
+        "label": "8月上旬",
+        "start": "2026-08-01",
+        "end": "2026-08-10",
+        "patternIds": [
+          "sq-week",
+          "earnings-season",
+          "sell-in-may",
+          "midterm-cycle",
+          "us-employment",
+          "earnings-cross",
+          "presidential-cycle",
+          "summer-thin",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 8,
+        "part": 1,
+        "label": "8月中旬",
+        "start": "2026-08-11",
+        "end": "2026-08-20",
+        "patternIds": [
+          "sq-week",
+          "earnings-season",
+          "sell-in-may",
+          "midterm-cycle",
+          "us-cpi",
+          "earnings-cross",
+          "presidential-cycle",
+          "summer-thin",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 8,
+        "part": 2,
+        "label": "8月下旬",
+        "start": "2026-08-21",
+        "end": "2026-08-31",
+        "patternIds": [
+          "sell-in-may",
+          "midterm-cycle",
+          "presidential-cycle",
+          "summer-thin",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 9,
+        "part": 0,
+        "label": "9月上旬",
+        "start": "2026-09-01",
+        "end": "2026-09-10",
+        "patternIds": [
+          "sq-week",
+          "sell-in-may",
+          "midterm-cycle",
+          "us-employment",
+          "september-rights",
+          "presidential-cycle",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 9,
+        "part": 1,
+        "label": "9月中旬",
+        "start": "2026-09-11",
+        "end": "2026-09-20",
+        "patternIds": [
+          "fomc",
+          "sq-week",
+          "sell-in-may",
+          "midterm-cycle",
+          "boj-meeting",
+          "us-cpi",
+          "september-rights",
+          "presidential-cycle",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 9,
+        "part": 2,
+        "label": "9月下旬",
+        "start": "2026-09-21",
+        "end": "2026-09-30",
+        "patternIds": [
+          "ex-dividend",
+          "sell-in-may",
+          "midterm-cycle",
+          "september-rights",
+          "presidential-cycle",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 10,
+        "part": 0,
+        "label": "10月上旬",
+        "start": "2026-10-01",
+        "end": "2026-10-10",
+        "patternIds": [
+          "sq-week",
+          "sell-in-may",
+          "halloween",
+          "midterm-cycle",
+          "us-employment",
+          "presidential-cycle",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 10,
+        "part": 1,
+        "label": "10月中旬",
+        "start": "2026-10-11",
+        "end": "2026-10-20",
+        "patternIds": [
+          "sell-in-may",
+          "halloween",
+          "midterm-cycle",
+          "us-cpi",
+          "presidential-cycle",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 10,
+        "part": 2,
+        "label": "10月下旬",
+        "start": "2026-10-21",
+        "end": "2026-10-31",
+        "patternIds": [
+          "fomc",
+          "sell-in-may",
+          "halloween",
+          "midterm-cycle",
+          "boj-meeting",
+          "presidential-cycle",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 11,
+        "part": 0,
+        "label": "11月上旬",
+        "start": "2026-11-01",
+        "end": "2026-11-10",
+        "patternIds": [
+          "sq-week",
+          "earnings-season",
+          "halloween",
+          "midterm-cycle",
+          "us-cpi",
+          "us-employment",
+          "earnings-cross",
+          "november-earnings-us",
+          "presidential-cycle",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 11,
+        "part": 1,
+        "label": "11月中旬",
+        "start": "2026-11-11",
+        "end": "2026-11-20",
+        "patternIds": [
+          "sq-week",
+          "mega-earnings",
+          "earnings-season",
+          "halloween",
+          "midterm-cycle",
+          "us-cpi",
+          "earnings-cross",
+          "november-earnings-us",
+          "presidential-cycle",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 11,
+        "part": 2,
+        "label": "11月下旬",
+        "start": "2026-11-21",
+        "end": "2026-11-30",
+        "patternIds": [
+          "halloween",
+          "midterm-cycle",
+          "november-earnings-us",
+          "presidential-cycle",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 12,
+        "part": 0,
+        "label": "12月上旬",
+        "start": "2026-12-01",
+        "end": "2026-12-10",
+        "patternIds": [
+          "fomc",
+          "sq-week",
+          "halloween",
+          "midterm-cycle",
+          "us-cpi",
+          "us-employment",
+          "tax-loss-selling",
+          "year-end-rally",
+          "presidential-cycle",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 12,
+        "part": 1,
+        "label": "12月中旬",
+        "start": "2026-12-11",
+        "end": "2026-12-20",
+        "patternIds": [
+          "sq-week",
+          "halloween",
+          "midterm-cycle",
+          "boj-meeting",
+          "us-cpi",
+          "tax-loss-selling",
+          "year-end-rally",
+          "presidential-cycle",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      },
+      {
+        "month": 12,
+        "part": 2,
+        "label": "12月下旬",
+        "start": "2026-12-21",
+        "end": "2026-12-31",
+        "patternIds": [
+          "halloween",
+          "midterm-cycle",
+          "tax-loss-selling",
+          "year-end-rally",
+          "presidential-cycle",
+          "midterm-2018-analogy",
+          "eto-anomaly"
+        ]
+      }
+    ]
+  },
+  "stocks": [
+    {
+      "code": "285A",
+      "name": "キオクシアホールディングス",
+      "sector": "電気機器",
+      "impactScore": 11,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 2,
+      "allCount": 9
+    },
+    {
+      "code": "4543",
+      "name": "テルモ",
+      "sector": "精密機器",
+      "impactScore": 11,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 2,
+      "allCount": 9
+    },
+    {
+      "code": "6501",
+      "name": "日立製作所",
+      "sector": "電気機器",
+      "impactScore": 11,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 2,
+      "allCount": 9
+    },
+    {
+      "code": "6503",
+      "name": "三菱電機",
+      "sector": "電気機器",
+      "impactScore": 11,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 2,
+      "allCount": 9
+    },
+    {
+      "code": "6701",
+      "name": "日本電気",
+      "sector": "電気機器",
+      "impactScore": 11,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 2,
+      "allCount": 9
+    },
+    {
+      "code": "6752",
+      "name": "パナソニック　ホールディングス",
+      "sector": "電気機器",
+      "impactScore": 11,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 2,
+      "allCount": 9
+    },
+    {
+      "code": "6758",
+      "name": "ソニーグループ",
+      "sector": "電気機器",
+      "impactScore": 11,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 2,
+      "allCount": 9
+    },
+    {
+      "code": "6857",
+      "name": "アドバンテスト",
+      "sector": "電気機器",
+      "impactScore": 11,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 2,
+      "allCount": 9
+    },
+    {
+      "code": "6861",
+      "name": "キーエンス",
+      "sector": "電気機器",
+      "impactScore": 11,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 2,
+      "allCount": 9
+    },
+    {
+      "code": "6981",
+      "name": "村田製作所",
+      "sector": "電気機器",
+      "impactScore": 11,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 2,
+      "allCount": 9
+    },
+    {
+      "code": "7701",
+      "name": "島津製作所",
+      "sector": "精密機器",
+      "impactScore": 11,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 2,
+      "allCount": 9
+    },
+    {
+      "code": "7729",
+      "name": "東京精密",
+      "sector": "精密機器",
+      "impactScore": 11,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 2,
+      "allCount": 9
+    },
+    {
+      "code": "7731",
+      "name": "ニコン",
+      "sector": "精密機器",
+      "impactScore": 11,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 2,
+      "allCount": 9
+    },
+    {
+      "code": "7733",
+      "name": "オリンパス",
+      "sector": "精密機器",
+      "impactScore": 11,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 2,
+      "allCount": 9
+    },
+    {
+      "code": "7741",
+      "name": "ＨＯＹＡ",
+      "sector": "精密機器",
+      "impactScore": 11,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 2,
+      "allCount": 9
+    },
+    {
+      "code": "7747",
+      "name": "朝日インテック",
+      "sector": "精密機器",
+      "impactScore": 11,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 2,
+      "allCount": 9
+    },
+    {
+      "code": "7762",
+      "name": "シチズン時計",
+      "sector": "精密機器",
+      "impactScore": 11,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 2,
+      "allCount": 9
+    },
+    {
+      "code": "8035",
+      "name": "東京エレクトロン",
+      "sector": "電気機器",
+      "impactScore": 11,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 2,
+      "allCount": 9
+    },
+    {
+      "code": "8050",
+      "name": "セイコーグループ",
+      "sector": "精密機器",
+      "impactScore": 11,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 2,
+      "allCount": 9
+    },
+    {
+      "code": "8086",
+      "name": "ニプロ",
+      "sector": "精密機器",
+      "impactScore": 11,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 2,
+      "allCount": 9
+    },
+    {
+      "code": "5631",
+      "name": "日本製鋼所",
+      "sector": "機械",
+      "impactScore": 10,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 1,
+      "allCount": 10
+    },
+    {
+      "code": "6005",
+      "name": "三浦工業",
+      "sector": "機械",
+      "impactScore": 10,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 1,
+      "allCount": 10
+    },
+    {
+      "code": "6113",
+      "name": "アマダ",
+      "sector": "機械",
+      "impactScore": 10,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 1,
+      "allCount": 10
+    },
+    {
+      "code": "6146",
+      "name": "ディスコ",
+      "sector": "機械",
+      "impactScore": 10,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 1,
+      "allCount": 10
+    },
+    {
+      "code": "6273",
+      "name": "ＳＭＣ",
+      "sector": "機械",
+      "impactScore": 10,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 1,
+      "allCount": 10
+    },
+    {
+      "code": "6301",
+      "name": "小松製作所",
+      "sector": "機械",
+      "impactScore": 10,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 1,
+      "allCount": 10
+    },
+    {
+      "code": "6326",
+      "name": "クボタ",
+      "sector": "機械",
+      "impactScore": 10,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 1,
+      "allCount": 10
+    },
+    {
+      "code": "6367",
+      "name": "ダイキン工業",
+      "sector": "機械",
+      "impactScore": 10,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 1,
+      "allCount": 10
+    },
+    {
+      "code": "7011",
+      "name": "三菱重工業",
+      "sector": "機械",
+      "impactScore": 10,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 1,
+      "allCount": 10
+    },
+    {
+      "code": "7013",
+      "name": "ＩＨＩ",
+      "sector": "機械",
+      "impactScore": 10,
+      "topPatternName": "大型個別決算 (エヌビディア型)",
+      "topPatternLevel": "中",
+      "uniqueCount": 1,
+      "allCount": 10
+    },
+    {
+      "code": "2327",
+      "name": "日鉄ソリューションズ",
+      "sector": "情報・通信業",
+      "impactScore": 1,
+      "topPatternName": "米CPI",
+      "topPatternLevel": "小",
+      "uniqueCount": 1,
+      "allCount": 9
+    },
+    {
+      "code": "2432",
+      "name": "ディー・エヌ・エー",
+      "sector": "情報・通信業",
+      "impactScore": 1,
+      "topPatternName": "米CPI",
+      "topPatternLevel": "小",
+      "uniqueCount": 1,
+      "allCount": 9
+    },
+    {
+      "code": "3626",
+      "name": "ＴＩＳＩ",
+      "sector": "情報・通信業",
+      "impactScore": 1,
+      "topPatternName": "米CPI",
+      "topPatternLevel": "小",
+      "uniqueCount": 1,
+      "allCount": 9
+    },
+    {
+      "code": "3635",
+      "name": "コーエーテクモホールディングス",
+      "sector": "情報・通信業",
+      "impactScore": 1,
+      "topPatternName": "米CPI",
+      "topPatternLevel": "小",
+      "uniqueCount": 1,
+      "allCount": 9
+    },
+    {
+      "code": "4307",
+      "name": "野村総合研究所",
+      "sector": "情報・通信業",
+      "impactScore": 1,
+      "topPatternName": "米CPI",
+      "topPatternLevel": "小",
+      "uniqueCount": 1,
+      "allCount": 9
+    },
+    {
+      "code": "4716",
+      "name": "日本オラクル",
+      "sector": "情報・通信業",
+      "impactScore": 1,
+      "topPatternName": "米CPI",
+      "topPatternLevel": "小",
+      "uniqueCount": 1,
+      "allCount": 9
+    },
+    {
+      "code": "9432",
+      "name": "ＮＴＴ",
+      "sector": "情報・通信業",
+      "impactScore": 1,
+      "topPatternName": "米CPI",
+      "topPatternLevel": "小",
+      "uniqueCount": 1,
+      "allCount": 9
+    },
+    {
+      "code": "9433",
+      "name": "ＫＤＤＩ",
+      "sector": "情報・通信業",
+      "impactScore": 1,
+      "topPatternName": "米CPI",
+      "topPatternLevel": "小",
+      "uniqueCount": 1,
+      "allCount": 9
+    },
+    {
+      "code": "9434",
+      "name": "ソフトバンク",
+      "sector": "情報・通信業",
+      "impactScore": 1,
+      "topPatternName": "米CPI",
+      "topPatternLevel": "小",
+      "uniqueCount": 1,
+      "allCount": 9
+    },
+    {
+      "code": "9984",
+      "name": "ソフトバンクグループ",
+      "sector": "情報・通信業",
+      "impactScore": 1,
+      "topPatternName": "米CPI",
+      "topPatternLevel": "小",
+      "uniqueCount": 1,
+      "allCount": 9
+    },
+    {
+      "code": "1414",
+      "name": "ショーボンドホールディングス",
+      "sector": "建設業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "1417",
+      "name": "ミライト・ワン",
+      "sector": "建設業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "1719",
+      "name": "安藤・間",
+      "sector": "建設業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "1721",
+      "name": "コムシスホールディングス",
+      "sector": "建設業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "1801",
+      "name": "大成建設",
+      "sector": "建設業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "1802",
+      "name": "大林組",
+      "sector": "建設業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "1803",
+      "name": "清水建設",
+      "sector": "建設業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "1808",
+      "name": "長谷工コーポレーション",
+      "sector": "建設業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "1878",
+      "name": "大東建託",
+      "sector": "不動産業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "1925",
+      "name": "大和ハウス工業",
+      "sector": "建設業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "1928",
+      "name": "積水ハウス",
+      "sector": "建設業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "2002",
+      "name": "日清製粉グループ本社",
+      "sector": "食料品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "2127",
+      "name": "日本Ｍ＆Ａセンターホールディングス",
+      "sector": "サービス業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "2181",
+      "name": "パーソルホールディングス",
+      "sector": "サービス業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "2201",
+      "name": "森永製菓",
+      "sector": "食料品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "2206",
+      "name": "江崎グリコ",
+      "sector": "食料品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "2212",
+      "name": "山崎製パン",
+      "sector": "食料品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "2222",
+      "name": "寿スピリッツ",
+      "sector": "食料品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "2229",
+      "name": "カルビー",
+      "sector": "食料品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "2331",
+      "name": "ＡＬＳＯＫ",
+      "sector": "サービス業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "2371",
+      "name": "カカクコム",
+      "sector": "サービス業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "2413",
+      "name": "エムスリー",
+      "sector": "サービス業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "2433",
+      "name": "博報堂ＤＹホールディングス",
+      "sector": "サービス業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "2502",
+      "name": "アサヒグループホールディングス",
+      "sector": "食料品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "2503",
+      "name": "キリンホールディングス",
+      "sector": "食料品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "2670",
+      "name": "エービーシー・マート",
+      "sector": "小売業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "2702",
+      "name": "日本マクドナルドホールディングス",
+      "sector": "小売業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "2768",
+      "name": "双日",
+      "sector": "卸売業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "2784",
+      "name": "アルフレッサ　ホールディングス",
+      "sector": "卸売業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "2802",
+      "name": "味の素",
+      "sector": "食料品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "2914",
+      "name": "日本たばこ産業",
+      "sector": "食料品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "3003",
+      "name": "ヒューリック",
+      "sector": "不動産業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "3038",
+      "name": "神戸物産",
+      "sector": "卸売業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "3048",
+      "name": "ビックカメラ",
+      "sector": "小売業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "3064",
+      "name": "ＭｏｎｏｔａＲＯ",
+      "sector": "小売業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "3086",
+      "name": "Ｊ．フロント　リテイリング",
+      "sector": "小売業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "3088",
+      "name": "マツキヨココカラ＆カンパニー",
+      "sector": "小売業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "3107",
+      "name": "ダイワボウホールディングス",
+      "sector": "卸売業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "3231",
+      "name": "野村不動産ホールディングス",
+      "sector": "不動産業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "3288",
+      "name": "オープンハウスグループ",
+      "sector": "不動産業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "3289",
+      "name": "東急不動産ホールディングス",
+      "sector": "不動産業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "3291",
+      "name": "飯田グループホールディングス",
+      "sector": "不動産業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "3382",
+      "name": "セブン＆アイ・ホールディングス",
+      "sector": "小売業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "3549",
+      "name": "クスリのアオキホールディングス",
+      "sector": "小売業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "4151",
+      "name": "協和キリン",
+      "sector": "医薬品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "4502",
+      "name": "武田薬品工業",
+      "sector": "医薬品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "4503",
+      "name": "アステラス製薬",
+      "sector": "医薬品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "4506",
+      "name": "住友ファーマ",
+      "sector": "医薬品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "4507",
+      "name": "塩野義製薬",
+      "sector": "医薬品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "4516",
+      "name": "日本新薬",
+      "sector": "医薬品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "4519",
+      "name": "中外製薬",
+      "sector": "医薬品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "4523",
+      "name": "エーザイ",
+      "sector": "医薬品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "4568",
+      "name": "第一三共",
+      "sector": "医薬品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "4578",
+      "name": "大塚ホールディングス",
+      "sector": "医薬品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "4661",
+      "name": "オリエンタルランド",
+      "sector": "サービス業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "4666",
+      "name": "パーク２４",
+      "sector": "不動産業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "5401",
+      "name": "日本製鉄",
+      "sector": "鉄鋼",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "5406",
+      "name": "神戸製鋼所",
+      "sector": "鉄鋼",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "5411",
+      "name": "ＪＦＥホールディングス",
+      "sector": "鉄鋼",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "5423",
+      "name": "東京製鐵",
+      "sector": "鉄鋼",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "5440",
+      "name": "共英製鋼",
+      "sector": "鉄鋼",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "5444",
+      "name": "大和工業",
+      "sector": "鉄鋼",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "5445",
+      "name": "東京鐵鋼",
+      "sector": "鉄鋼",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "5451",
+      "name": "ヨドコウ",
+      "sector": "鉄鋼",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "5463",
+      "name": "丸一鋼管",
+      "sector": "鉄鋼",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "5471",
+      "name": "大同特殊鋼",
+      "sector": "鉄鋼",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "5830",
+      "name": "いよぎんホールディングス",
+      "sector": "銀行業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "5831",
+      "name": "しずおかフィナンシャルグループ",
+      "sector": "銀行業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "5832",
+      "name": "ちゅうぎんフィナンシャルグループ",
+      "sector": "銀行業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "5838",
+      "name": "楽天銀行",
+      "sector": "銀行業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "6098",
+      "name": "リクルートホールディングス",
+      "sector": "サービス業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "6178",
+      "name": "日本郵政",
+      "sector": "サービス業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "642A",
+      "name": "キューデンホールディングス",
+      "sector": "電気・ガス業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "7148",
+      "name": "ＦＰＧ",
+      "sector": "証券、商品先物取引業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "7157",
+      "name": "ライフネット生命保険",
+      "sector": "保険業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "7172",
+      "name": "ジャパンインベストメントアドバイザー",
+      "sector": "証券、商品先物取引業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "7181",
+      "name": "かんぽ生命保険",
+      "sector": "保険業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "7182",
+      "name": "ゆうちょ銀行",
+      "sector": "銀行業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "7388",
+      "name": "ＦＰパートナー",
+      "sector": "保険業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "7832",
+      "name": "バンダイナムコホールディングス",
+      "sector": "その他製品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "7846",
+      "name": "パイロットコーポレーション",
+      "sector": "その他製品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "7867",
+      "name": "タカラトミー",
+      "sector": "その他製品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "7911",
+      "name": "ＴＯＰＰＡＮホールディングス",
+      "sector": "その他製品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "7912",
+      "name": "大日本印刷",
+      "sector": "その他製品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "7936",
+      "name": "アシックス",
+      "sector": "その他製品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "7951",
+      "name": "ヤマハ",
+      "sector": "その他製品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "7956",
+      "name": "ピジョン",
+      "sector": "その他製品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "7974",
+      "name": "任天堂",
+      "sector": "その他製品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "7984",
+      "name": "コクヨ",
+      "sector": "その他製品",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8001",
+      "name": "伊藤忠商事",
+      "sector": "卸売業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8002",
+      "name": "丸紅",
+      "sector": "卸売業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8015",
+      "name": "豊田通商",
+      "sector": "卸売業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8031",
+      "name": "三井物産",
+      "sector": "卸売業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8053",
+      "name": "住友商事",
+      "sector": "卸売業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8058",
+      "name": "三菱商事",
+      "sector": "卸売業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8267",
+      "name": "イオン",
+      "sector": "小売業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8306",
+      "name": "三菱ＵＦＪフィナンシャル・グループ",
+      "sector": "銀行業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8308",
+      "name": "りそなホールディングス",
+      "sector": "銀行業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8309",
+      "name": "三井住友トラストグループ",
+      "sector": "銀行業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8316",
+      "name": "三井住友フィナンシャルグループ",
+      "sector": "銀行業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8411",
+      "name": "みずほフィナンシャルグループ",
+      "sector": "銀行業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8473",
+      "name": "ＳＢＩホールディングス",
+      "sector": "証券、商品先物取引業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8595",
+      "name": "ＪＡＦＣＯ",
+      "sector": "証券、商品先物取引業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8601",
+      "name": "大和証券グループ本社",
+      "sector": "証券、商品先物取引業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8604",
+      "name": "野村ホールディングス",
+      "sector": "証券、商品先物取引業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8609",
+      "name": "岡三証券グループ",
+      "sector": "証券、商品先物取引業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8613",
+      "name": "丸三証券",
+      "sector": "証券、商品先物取引業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8616",
+      "name": "東海東京フィナンシャル・ホールディングス",
+      "sector": "証券、商品先物取引業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8628",
+      "name": "松井証券",
+      "sector": "証券、商品先物取引業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8630",
+      "name": "ＳＯＭＰＯホールディングス",
+      "sector": "保険業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8715",
+      "name": "アニコム　ホールディングス",
+      "sector": "保険業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8725",
+      "name": "ＭＳ＆ＡＤインシュアランスグループホールディングス",
+      "sector": "保険業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8729",
+      "name": "ソニーフィナンシャルグループ",
+      "sector": "保険業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8750",
+      "name": "第一ライフグループ",
+      "sector": "保険業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8766",
+      "name": "東京海上ホールディングス",
+      "sector": "保険業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8795",
+      "name": "Ｔ＆Ｄホールディングス",
+      "sector": "保険業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8801",
+      "name": "三井不動産",
+      "sector": "不動産業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8802",
+      "name": "三菱地所",
+      "sector": "不動産業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "8830",
+      "name": "住友不動産",
+      "sector": "不動産業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9001",
+      "name": "東武鉄道",
+      "sector": "陸運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9003",
+      "name": "相鉄ホールディングス",
+      "sector": "陸運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9005",
+      "name": "東急",
+      "sector": "陸運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9006",
+      "name": "京浜急行電鉄",
+      "sector": "陸運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9007",
+      "name": "小田急電鉄",
+      "sector": "陸運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9008",
+      "name": "京王電鉄",
+      "sector": "陸運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9009",
+      "name": "京成電鉄",
+      "sector": "陸運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9020",
+      "name": "東日本旅客鉄道",
+      "sector": "陸運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9021",
+      "name": "西日本旅客鉄道",
+      "sector": "陸運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9022",
+      "name": "東海旅客鉄道",
+      "sector": "陸運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9101",
+      "name": "日本郵船",
+      "sector": "海運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9104",
+      "name": "商船三井",
+      "sector": "海運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9107",
+      "name": "川崎汽船",
+      "sector": "海運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9110",
+      "name": "ＮＳユナイテッド海運",
+      "sector": "海運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9115",
+      "name": "明海グループ",
+      "sector": "海運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9119",
+      "name": "飯野海運",
+      "sector": "海運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9127",
+      "name": "玉井商船",
+      "sector": "海運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9130",
+      "name": "共栄タンカー",
+      "sector": "海運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9171",
+      "name": "栗林商船",
+      "sector": "海運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9201",
+      "name": "日本航空",
+      "sector": "空運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9202",
+      "name": "ＡＮＡホールディングス",
+      "sector": "空運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9204",
+      "name": "スカイマーク",
+      "sector": "空運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9206",
+      "name": "スターフライヤー",
+      "sector": "空運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9233",
+      "name": "アジア航測",
+      "sector": "空運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9308",
+      "name": "乾汽船",
+      "sector": "海運業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9501",
+      "name": "東京電力ホールディングス",
+      "sector": "電気・ガス業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9502",
+      "name": "中部電力",
+      "sector": "電気・ガス業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9503",
+      "name": "関西電力",
+      "sector": "電気・ガス業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9504",
+      "name": "中国電力",
+      "sector": "電気・ガス業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9505",
+      "name": "北陸電力",
+      "sector": "電気・ガス業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9506",
+      "name": "東北電力",
+      "sector": "電気・ガス業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9507",
+      "name": "四国電力",
+      "sector": "電気・ガス業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9509",
+      "name": "北海道電力",
+      "sector": "電気・ガス業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9513",
+      "name": "電源開発",
+      "sector": "電気・ガス業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9735",
+      "name": "セコム",
+      "sector": "サービス業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    },
+    {
+      "code": "9983",
+      "name": "ファーストリテイリング",
+      "sector": "小売業",
+      "impactScore": 0,
+      "topPatternName": null,
+      "topPatternLevel": null,
+      "uniqueCount": 0,
+      "allCount": 10
+    }
+  ]
+}

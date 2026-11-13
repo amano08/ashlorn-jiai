@@ -1,0 +1,344 @@
+/* ================================================================
+   視覚設計 (FINAL-DESIGN §13, 2026-11-13 視覚再設計ラウンド)
+   情報の決定 (件数・順序・文言) は変えず、見せ方の層だけを組み直す。
+   階層: 第1層=FVの数字アンカー / 第2層=時間帯とセクタの面 / 第3層=銘柄行。
+   符号化: 影響=ドットの大きさ×個数×塗り・輪郭 / 時間=ピルの形 /
+           未検証=ダイヤ印+破線の小タグ / セクタ=面+左バー。
+   余白: セクション間 > セクタ間 > 面の内側 > 行間 の序列を固定する。
+   ================================================================ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+[hidden] { display: none !important; }
+:root { --ember: #9a3f06; --ink: #2b2320; --mut: #5d4f43; --line: #ddd0c2;
+  --mid: hsl(21 72% 58%); --small: hsl(21 82% 86%); --mid-ink: #401f04; --small-ink: #5f2d08;
+  --card: #ffffff; --calm: #f7f3ee; --hair: #f0e7da; }
+body { font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; color: var(--ink);
+  background: #fdfbf9; font-size: 16px; line-height: 1.6; }
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+:focus-visible { outline: 3px solid var(--ember); outline-offset: 2px; }
+
+/* ---- 影響の可能性: シグナルバー符号 (高さの階段×塗り本数+語1字) ----
+   磨き上げラウンド (判断 J12): ドット (直径差2px刻み) は大と中の段階差が
+   一目で微妙だった。スロット3本は固定し、高さの階段 (5/8.5/12px) と
+   塗り本数 (3/2/1) で輪郭のプロファイル自体がレベルになる形に変えた。
+   塗り色は ember 一色に統一し、意味は色でなく形と本数が担う。 */
+.imp { display: inline-flex; align-items: center; gap: 6px; flex: none; }
+.imp .bars { display: inline-flex; align-items: flex-end; gap: 2.5px; height: 12px; }
+.imp .bars i { display: block; width: 4px; border-radius: 1px; background: #e3d3b6; }
+.imp .bars i:nth-child(1) { height: 5px; }
+.imp .bars i:nth-child(2) { height: 8.5px; }
+.imp .bars i:nth-child(3) { height: 12px; }
+.imp-大 .bars i { background: var(--ember); }
+.imp-中 .bars i:nth-child(-n+2) { background: var(--ember); }
+.imp-小 .bars i:nth-child(1) { background: var(--ember); }
+.imp .imp-w { font-size: 13px; font-weight: 700; color: var(--mut); }
+/* 凡例 (ブロック3の先頭・見出し直下に1か所だけ。監査3 修正3で前倒し) */
+.legend { display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  font-size: 13px; color: var(--mut); margin-top: 6px; }
+.legend .legend-t { font-weight: 700; }
+
+.when-chip { font-size: 14px; font-weight: 700; color: #57493d; background: #f7f3ee;
+  border: 1px solid var(--line); border-radius: 999px; padding: 1px 9px; }
+.mark-chip { font-size: 14px; font-weight: 700; color: #fff; background: var(--ember);
+  border-radius: 999px; padding: 1px 9px; }
+.cnt { font-size: 14px; font-weight: 700; color: var(--ember); margin-left: 8px; }
+
+/* ---- ヘッダ ---- */
+.masthead { padding: 10px 0 6px; border-bottom: 1px solid var(--hair); }
+.mast-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.site-name { font-size: 15px; letter-spacing: .12em; color: var(--ember); font-weight: 700;
+  display: inline-flex; align-items: center; gap: 8px; }
+/* ブランドマーク: 影響符号 (シグナルバー) と同じ形を顔の印に使う (判断 J15) */
+.brand-mark { display: inline-flex; align-items: flex-end; gap: 2px; height: 13px; }
+.brand-mark i { display: block; width: 4px; border-radius: 1px; background: var(--ember); }
+.brand-mark i:nth-child(1) { height: 5px; }
+.brand-mark i:nth-child(2) { height: 9px; }
+.brand-mark i:nth-child(3) { height: 13px; }
+.data-chip { font-size: 14px; font-weight: 700; color: #57493d; background: #f7f3ee;
+  border: 1px solid var(--line); border-radius: 999px; padding: 1px 10px;
+  white-space: nowrap; flex: none; }
+.date-line { font-size: 17px; font-weight: 700; margin-top: 2px; line-height: 1.4; }
+.date-line .jun { font-weight: 400; font-size: 15px; color: #57493d; }
+
+/* ---- 第1層: FV = 結論カード (面+左アクセントバー) ---- */
+.fv { margin-top: 8px; background: var(--card); border: 1px solid var(--line);
+  border-left: 6px solid var(--ember); border-radius: 14px;
+  padding: 10px 20px 6px; box-shadow: 0 1px 6px rgba(43,35,32,.05); }
+h1 { font-size: 27px; line-height: 1.25; letter-spacing: -.01em; }
+.summary { margin-top: 4px; font-size: 17px; font-weight: 700; line-height: 1.45; }
+/* 数字アンカー帯: ラベル小・数字大。銘柄 (hero) が最大で視線の終点 */
+.cnt-chips { display: flex; margin-top: 6px; border-top: 1px solid var(--line); padding-top: 6px; }
+.cnt-chip { flex: 1; display: flex; flex-direction: column; padding: 0 16px;
+  border-left: 1px solid var(--line); }
+.cnt-chip:first-child { border-left: 0; padding-left: 0; }
+.cnt-lab { font-size: 13px; font-weight: 700; letter-spacing: .05em; color: var(--mut); line-height: 1.3; }
+.cnt-num { font-size: 31px; font-weight: 800; line-height: 1.08; color: var(--ink);
+  letter-spacing: -.01em; font-variant-numeric: tabular-nums; }
+.cnt-num small { font-size: 15px; font-weight: 700; color: var(--mut); margin-left: 2px; }
+.cnt-chip.hero .cnt-num { font-size: 34px; color: var(--ember); }
+.cnt-chip.hero .cnt-lab { color: var(--ember); }
+/* 固有0件の日 (判断 J13): 0 を hero の強調 (最大・ember) で見せると「無い」
+   ことが弱い形でしか伝わらない。左バーを静かな色に落とし、3つの数字を
+   同寸・同色の「空」の姿に揃える。結論は要点一文が担う。正直さはそのまま、
+   形だけを「静かな日」の状態として成立させる。 */
+.fv[data-zero] { border-left-color: #d9cbb8; }
+.fv[data-zero] .cnt-num { font-size: 31px; color: #8a7a68; }
+.fv[data-zero] .cnt-chip.hero .cnt-num { font-size: 31px; color: #8a7a68; }
+.fv[data-zero] .cnt-chip.hero .cnt-lab { color: var(--mut); }
+
+section { margin-top: 20px; }
+section[aria-labelledby="time-h"], section[aria-labelledby="sector-h"] { margin-top: 12px; }
+h2 { font-size: 22px; line-height: 1.25; }
+.period-plain { display: none; }
+
+/* ---- 第2層: 今日の定石 (時間はピルの形で符号化) ---- */
+.time-groups { margin-top: 6px; display: flex; flex-direction: column; gap: 6px; }
+/* 監査3 修正2: グループごとに淡い面+左バーの塊として分ける (流れにしない)。
+   ラベルピルは各グループの先頭に固定され、ブラーでも4つの塊に分かれて見える。
+   面と余白による区切りは視覚システムの文法 (セクタ=面の群れ) の範囲内。 */
+.time-group { display: grid; grid-template-columns: 118px 1fr; column-gap: 12px;
+  align-items: start;
+  background: var(--calm); border-radius: 10px; padding: 0 12px;
+  border-left: 3px solid var(--line); }
+.time-group[data-bucket="today"] { border-left-color: var(--ember); }
+.time-group[data-bucket="period"] { border-left-color: var(--mid); }
+.time-group[data-bucket="future"] { border-left-color: hsl(21 60% 62%); }
+.time-group[data-bucket="past"] { border-left-color: #d9cbb8; }
+.time-list { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; }
+.time-h { justify-self: start; margin-top: 8px; }
+/* ブロック3の見出し行: 凡例は見出しの横に置き、最初の符号より前に出す */
+.time-head { display: flex; align-items: center; gap: 8px 16px; flex-wrap: wrap; }
+.time-head .legend { margin-top: 0; }
+.time-h { font-size: 14px; font-weight: 700; border-radius: 999px; padding: 2px 12px;
+  background: #faf3ec; color: var(--ember); border: 1px solid var(--line); }
+.time-h .cnt { margin-left: 6px; }
+.time-group[data-bucket="today"] .time-h { background: var(--ember); color: #fff; border-color: var(--ember); }
+.time-group[data-bucket="today"] .time-h .cnt { color: #ffd9bd; }
+.time-group[data-bucket="future"] .time-h { background: #fff; color: var(--ember);
+  border: 1.5px solid var(--ember); }
+.time-group[data-bucket="future"] .time-h .cnt { color: var(--ember); }
+.time-group[data-bucket="past"] .time-h { background: #efe9e2; color: var(--mut);
+  border: 1px solid transparent; }
+.time-group[data-bucket="past"] .time-h .cnt { color: var(--mut); }
+.time-item { display: inline-flex; gap: 7px; align-items: center; flex-wrap: nowrap; }
+.pat-label { font-weight: 700; font-size: 16px; display: inline-flex; align-items: center; min-height: 44px; }
+.term { font: inherit; font-weight: 700; font-size: 16px; color: var(--ink); background: none;
+  border: 0; border-bottom: 2px dotted var(--ember); min-height: 44px; padding: 4px 2px;
+  cursor: pointer; display: inline-flex; align-items: center; gap: 6px; text-align: left; }
+.term .ic { width: 22px; height: 22px; flex: none; border: 1.5px solid var(--ember); border-radius: 50%;
+  color: var(--ember); font-size: 14px; font-weight: 700; display: inline-flex;
+  align-items: center; justify-content: center; }
+#tip { position: absolute; z-index: 60; width: max-content; max-width: 280px;
+  background: #2b2320; color: #fff; border-radius: 10px; padding: 10px 14px;
+  font-size: 14px; line-height: 1.55; box-shadow: 0 6px 24px rgba(43,35,32,.35); }
+#tip[hidden] { display: none; }
+#tip .tip-t { display: block; font-weight: 700; font-size: 15px; margin-bottom: 2px; }
+
+/* ---- 第2層: セクタ = 面の群れ (左バーは由来の最大レベルで太さと色) ---- */
+.origin-note { font-size: 14px; color: var(--mut); margin-top: 2px; line-height: 1.4; }
+/* 根拠文のモバイル短縮版 (監査3 修正1の補助線。意味は変えず1行に収める) */
+.on-short { display: none; }
+/* 由来チップの「ほかN件」表示はモバイル圧縮時のみ (監査3 修正1) */
+.sec-chips-more { display: none; }
+.stage-note { font-size: 15px; font-weight: 700; color: var(--ember); background: #faf3ec;
+  border: 1px solid var(--line); border-radius: 10px; padding: 6px 12px; margin-top: 6px; }
+.no-spec { font-size: 17px; font-weight: 700; }
+.next-spec { font-size: 15px; color: var(--mut); margin-top: 6px; }
+.bg-main { margin-top: 8px; font-size: 16px; border: 2px solid var(--ember); padding: 14px 18px; }
+/* 固有0件の日は要素が少なく疎なページになるため、節の間隔を広げて
+   静かなリズムにする (デスクトップのみ。モバイルは通常の節間隔を維持)。 */
+section[aria-labelledby="bg-h"] { margin-top: 28px; }
+section[aria-label="業種ごとの定石"] { margin-top: 36px; }
+.sec-rows { display: flex; flex-direction: column; gap: 18px; margin-top: 6px; }
+.sec-row { position: relative; background: var(--card); border: 1px solid var(--line);
+  border-radius: 14px; padding: 4px 18px 12px 20px; overflow: hidden; }
+.sec-row::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0;
+  width: 6px; background: var(--ember); }
+.sec-row[data-maxlv="中"]::before { width: 4px; background: hsl(21 72% 50%); }
+.sec-row[data-maxlv="小"]::before { width: 3px; background: hsl(21 55% 50%); }
+.sec-row-head { display: flex; gap: 10px; align-items: baseline; }
+/* セクタの重みバー (判断 J14): fill の長さ = その日の最大セクタに対する
+   panel score の相対値。score は §7 の並び順を決めている基礎数値そのもので、
+   順序という形でしか見えなかった「重みの違い」を長さでも二重化する。
+   色は左バーの文法 (最大レベル) に合わせる。 */
+.sec-meter { height: 4px; border-radius: 2px; background: #f1e8da; margin-top: 2px; overflow: hidden; }
+.sec-meter i { display: block; height: 100%; border-radius: 2px; background: var(--ember); }
+.sec-row[data-maxlv="中"] .sec-meter i { background: hsl(21 72% 45%); }
+.sec-row[data-maxlv="小"] .sec-meter i { background: hsl(21 55% 50%); }
+.sec-name { font-size: 24px; font-weight: 700; line-height: 1.25; letter-spacing: .01em; }
+.sec-count { font-size: 14px; font-weight: 700; color: var(--mut); }
+.sec-count b { font-size: 21px; color: var(--ember); margin-right: 1px; }
+.sec-chips { display: flex; flex-direction: row; flex-wrap: wrap; gap: 2px 20px; margin-top: 0; }
+.sec-chip { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+/* 未検証: ダイヤ印+破線の小タグ (視覚的には印、語は義務として残す) */
+.unv { font-size: 13px; font-weight: 400; color: var(--mut); border: 1px dashed #c9b8a6;
+  border-radius: 4px; padding: 0 7px; display: inline-flex; align-items: center; gap: 5px; }
+.unv::before { content: ""; width: 6px; height: 6px; flex: none;
+  background: #ad702c; transform: rotate(45deg); }
+
+/* ---- 第3層: 銘柄行 = 静かな従属層 ---- */
+.stk-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; column-gap: 28px;
+  margin-top: 2px; }
+.stk-list .stk { display: flex; gap: 10px; align-items: center; padding: 4px 2px;
+  border-bottom: 1px solid var(--hair); line-height: 1.45; }
+.stk-code { font-weight: 400; color: var(--mut); font-size: 15px; min-width: 52px;
+  font-variant-numeric: tabular-nums; }
+.stk-name { font-weight: 500; }
+.more-btn { margin-top: 10px; min-height: 44px; padding: 8px 18px; font: inherit; font-size: 15px;
+  font-weight: 700; color: var(--ember); background: #fff; border: 1.5px solid var(--ember);
+  border-radius: 999px; cursor: pointer; }
+.bg-band { margin-top: 20px; background: var(--calm); border: 1px solid var(--line); border-radius: 12px;
+  padding: 10px 16px; font-size: 15px; }
+
+/* ---- 検索・下層・フッタ (従属層のまま) ---- */
+.search-box { display: flex; gap: 8px; margin-top: 10px; }
+.search-box input { flex: 1; min-height: 52px; font-size: 16px; padding: 8px 14px;
+  border: 2px solid var(--ember); border-radius: 10px; background: #fff; color: var(--ink); }
+.suggest { list-style: none; border: 1px solid var(--line); border-radius: 10px; overflow: hidden;
+  margin-top: 6px; background: #fff; }
+.suggest li button { display: flex; gap: 10px; align-items: center; width: 100%; min-height: 48px;
+  padding: 10px 14px; font: inherit; font-size: 16px; text-align: left; background: #fff;
+  border: 0; border-bottom: 1px solid var(--line); cursor: pointer; color: var(--ink); }
+.suggest li:last-child button { border-bottom: 0; }
+.suggest .sg-code { font-weight: 700; color: var(--ember); }
+.suggest .sg-sector { margin-left: auto; font-size: 14px; color: var(--mut); }
+.result { margin-top: 12px; border: 2px solid var(--ember); border-radius: 12px; padding: 12px 16px; background: #fff; }
+.result .r-head { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.result .r-code { font-size: 19px; font-weight: 700; color: var(--ember); }
+.result .r-name { font-size: 19px; font-weight: 700; }
+.result .r-sector { font-size: 14px; color: var(--mut); }
+.result h4 { font-size: 15px; margin-top: 12px; color: var(--ember); }
+.spec-item { display: flex; gap: 8px; align-items: center; flex-wrap: wrap;
+  padding: 4px 0; border-bottom: 1px dashed var(--line); }
+.spec-item:last-of-type { border-bottom: 0; }
+.result .bg-line { margin-top: 6px; font-size: 15px; }
+.result .none { margin-top: 6px; font-size: 16px; }
+.links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 20px; }
+.links a { display: flex; align-items: center; border: 1px solid var(--line); border-radius: 12px;
+  padding: 10px 14px; background: #fff; color: var(--ember); text-decoration: none;
+  min-height: 44px; font-weight: 700; font-size: 16px; }
+.foot { margin: 22px 0 30px; font-size: 14px; color: var(--mut); border-top: 1px solid var(--line); padding-top: 10px; }
+
+/* ---- 状態の表現 (磨き上げラウンド, 判断 J16): 静止画で死なない仕上げ ----
+   ホバー/フォーカスにだけ現れる応答を、操作できる要素すべてに一貫して付ける。
+   遷移は色と背景のみ (レイアウトは動かさない)。 */
+::selection { background: #f3ddc8; }
+.term { transition: background-color .15s ease; border-radius: 6px 6px 0 0; }
+.term:hover { background: #faf3ec; }
+.more-btn { transition: background-color .15s ease, border-color .15s ease; }
+.more-btn:hover { background: #faf3ec; }
+.links a { transition: border-color .15s ease, background-color .15s ease; }
+.links a:hover { border-color: var(--ember); background: #fffcf9; }
+.suggest li button { transition: background-color .12s ease; }
+.suggest li button:hover { background: var(--calm); }
+.search-box input { transition: box-shadow .15s ease; }
+.search-box input:focus { box-shadow: 0 0 0 3px rgba(154,63,6,.16); }
+@media (hover: hover) and (pointer: fine) {
+  .stk { transition: background-color .12s ease; }
+  .stk:hover { background: #fbf7f1; }
+  .sec-row { transition: box-shadow .18s ease; }
+  .sec-row:hover { box-shadow: 0 2px 10px rgba(43,35,32,.07); }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+@media (max-width: 640px) {
+  .wrap { padding: 0 16px; }
+  h1 { font-size: 20px; line-height: 1.25; }
+  h2 { font-size: 19px; }
+  .links { grid-template-columns: 1fr; }
+  section { margin-top: 10px; }
+  .time-groups { gap: 6px; margin-top: 6px; }
+  .time-group { display: flex; flex-wrap: wrap; align-items: center;
+    padding: 0 10px; gap: 2px 10px; }
+  .time-list { display: contents; }
+  .time-h { margin-top: 0; }
+  section[aria-labelledby="time-h"] { margin-top: 4px; }
+  .time-item { gap: 5px; }
+  /* モバイル密度調整: 凍結部品 (用語ボタン44px等) には触らず、
+     余白と行間だけで §8 の FV ラインに届かせる (視覚再設計でも踏襲)。 */
+  .masthead { padding-top: 4px; }
+  /* ブランドマーク分だけ広くなったサイト名とデータチップが 360px で
+     折れないよう、モバイルでは字間とチップの余白だけを詰める */
+  .site-name { font-size: 14px; letter-spacing: .07em; gap: 6px; }
+  .data-chip { padding: 1px 8px; }
+  .date-line { line-height: 1.3; margin-top: 0; }
+  .fv { margin-top: 2px; padding: 8px 14px 4px; border-left-width: 5px; }
+  .summary { font-size: 16px; line-height: 1.5; margin-top: 2px; }
+  .cnt-chips { margin-top: 3px; padding-top: 3px; }
+  .cnt-chip { padding: 0 6px; }
+  .cnt-lab { letter-spacing: .02em; white-space: nowrap; }
+  .cnt-num { font-size: 25px; }
+  .cnt-chip.hero .cnt-num { font-size: 28px; }
+  .time-h { padding: 1px 10px; }
+  .origin-note { margin-top: 2px; line-height: 1.45; }
+  /* 監査3 修正1 (補助線): 根拠文はモバイルでは短縮版1行に切替える */
+  .on-full { display: none; }
+  .on-short { display: inline; }
+  .legend { gap: 10px; margin-top: 4px; }
+  .stage-note { margin-top: 4px; }
+  section[aria-labelledby="sector-h"] { margin-top: 4px; }
+  section[aria-labelledby="bg-h"] { margin-top: 10px; }
+  section[aria-label="業種ごとの定石"] { margin-top: 10px; }
+  .bg-main { padding: 10px 16px; }
+  .sec-rows { gap: 12px; margin-top: 4px; }
+  .sec-row { padding: 3px 12px 8px 15px; }
+  /* 監査3 修正1: 由来チップをモバイルで1行に圧縮する。先頭チップは中身を
+     流し込み (display:contents) して未検証・日付チップを同じ流れに残し、
+     2件目以降は隠して「ほかN件の定石」に置き換える。 */
+  .sec-chips { margin-top: 0; gap: 4px 8px; align-items: center; }
+  .sec-chip { gap: 6px; }
+  .sec-chip:first-child { display: contents; }
+  .sec-chip:nth-child(n+2) { display: none; }
+  .sec-chips-more { display: inline-flex; align-items: center; min-height: 20px;
+    font-size: 13px; font-weight: 700; color: var(--mut); }
+  .sec-chips .unv { line-height: 1.25; }
+  .stk-list { margin-top: 0; grid-template-columns: 1fr; }
+  .sec-name { font-size: 20px; line-height: 1.2; }
+  /* モバイル圧縮 第1段 (§8): ブロック3のチップから影響の符号を省略する。
+     符号の情報はセクタ見出しの由来チップ側 (.sec-chip .imp) で担保される。 */
+  .time-item .imp { display: none; }
+  /* モバイル圧縮 第2段 (§8): 「この時期」グループはチップ列をやめ、
+     名前だけの平文列挙 (平文・操作なし) に替える。 */
+  .time-group[data-bucket="period"] .time-item { display: none; }
+  .period-plain { display: block; flex: 1 1 100%; font-size: 14px; line-height: 1.45; }
+}
+
+/* ================================================================
+   本番実装の追加分 (2026-11-13 配線)
+   - 重い日 (FINAL-DESIGN §4.2): デスクトップで由来チップを2件まで+「ほかN件」
+   - 下層ビュー (定石一覧 / 年間マップ / 全銘柄一覧): 同じ文法の従属層
+   - 読み込み・エラー表示
+   ================================================================ */
+.sec-chips-more-d { display: none; }
+@media (min-width: 641px) {
+  .wrap[data-stage="heavy"] .sec-chip-extra { display: none; }
+  .wrap[data-stage="heavy"] .sec-chips-more-d { display: inline-flex; align-items: center;
+    min-height: 20px; font-size: 13px; font-weight: 700; color: var(--mut); }
+}
+.wrap[data-stage="heavy"] .stk { padding-top: 3px; padding-bottom: 3px; }
+
+.loading, .load-error { max-width: 880px; margin: 40px auto; padding: 0 20px;
+  font-size: 16px; color: var(--mut); }
+.load-error { color: var(--ink); }
+
+.sub-back { display: inline-flex; align-items: center; min-height: 44px;
+  color: var(--ember); font-weight: 700; font-size: 15px; text-decoration: none; }
+.sub-note { font-size: 14px; color: var(--mut); margin-top: 2px; }
+.pat-list { list-style: none; margin-top: 10px; border-top: 1px solid var(--hair); }
+.pat-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+  padding: 7px 2px; border-bottom: 1px solid var(--hair); }
+.pat-row .pat-name { font-weight: 700; font-size: 16px; }
+.pat-row .pat-kind { font-size: 13px; color: var(--mut); }
+.pat-row .pat-basis { font-size: 13px; color: var(--mut); border: 1px solid var(--line);
+  border-radius: 999px; padding: 0 8px; }
+.map-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 10px; margin-top: 10px; }
+.map-item { border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px;
+  background: #fff; }
+.map-item.cur { border: 2px solid var(--ember); background: #fffcf8; }
+.map-item .mi-label { font-weight: 700; font-size: 16px; }
+.map-item .mi-range { font-size: 13px; color: var(--mut); }
+.map-item .mi-pats { font-size: 13px; margin-top: 4px; line-height: 1.5; }
+.as-sec { margin-top: 18px; }
+.as-sec h3 { font-size: 19px; }
+.as-sec h3 .cnt { margin-left: 6px; }
