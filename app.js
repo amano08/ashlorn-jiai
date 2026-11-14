@@ -8,7 +8,7 @@
 const DOWN = { '大': '中', '中': '小', '小': '小' };
 const W = { '大': 100, '中': 10, '小': 1 };
 const R = { '大': 3, '中': 2, '小': 1 };
-const BR = { '統計': 3, '経験則': 2, '眉唾': 1 };
+const BR = { '統計': 3, '経験則': 2, '根拠未確認': 1, '眉唾': 1 };
 const CR = { 'event': 0, 'monthly': 1, 'cycle': 2 };
 const WD = ['月', '火', '水', '木', '金', '土', '日'];
 
@@ -330,7 +330,7 @@ function buildMain() {
       }
       const markChips = marksOf(pat[pid]).map(mk => '<span class="mark-chip">' + esc(mk) + '</span>').join('');
       const extra = (stage === '重い日' && ci >= 2) ? ' sec-chip-extra' : '';
-      chips += '<span class="sec-chip' + extra + '">' + lv(e) +
+      chips += '<span class="sec-chip' + extra + '">' +
         termHtml(pid, '', shortName(pid)) + dateChip + markChips +
         '<span class="unv">未検証</span></span>';
     });
@@ -430,7 +430,7 @@ function buildMain() {
 (marketNote ? '  <p class="market-note">' + esc(marketNote) + '</p>\n' : '') +
 '</header>\n\n' +
 '<section class="fv" aria-label="今日の要点"' + (zero ? ' data-zero="1"' : '') + '>\n' +
-'  <h1>今日は、どんな株が動きやすい日？</h1>\n' +
+'  <h1>重なる定石と、関係する業種・銘柄</h1>\n' +
 '  <p class="summary">' + esc(factSentence) + '</p>\n' +
 '  <div class="cnt-chips">\n' +
 '    <span class="cnt-chip"><span class="cnt-lab">固有の定石</span><b class="cnt-num">' + specPids.length + '<small>件</small></b></span>\n' +
@@ -521,7 +521,6 @@ function bindInteractions() {
   const result = document.querySelector('#result');
   if (input && sug && result) {
     const escHtml = t => { const d = document.createElement('div'); d.textContent = t; return d.innerHTML; };
-    function imp(level) { return lv(level); }
     function termBtn(p) {
       if (p.term && p.tip) {
         return '<button type="button" class="term" data-term="' + escHtml(p.term) + '" data-tip="' + escHtml(p.tip) + '" aria-expanded="false" aria-describedby="tip">' + escHtml(p.name) + '<span class="ic" aria-hidden="true">?</span></button>';
@@ -532,7 +531,7 @@ function bindInteractions() {
       sug.hidden = true;
       const spec = s.spec.length
         ? s.spec.map(p =>
-            '<div class="spec-item">' + imp(p.level) + termBtn(p) +
+            '<div class="spec-item">' + termBtn(p) +
             (p.when ? '<span class="when-chip">' + escHtml(p.bucket) + ' ' + escHtml(p.when) + '</span>' : '') +
             (p.marks || []).map(mk => '<span class="mark-chip">' + escHtml(mk) + '</span>').join('') +
             '<span class="unv">未検証</span></div>').join('')
