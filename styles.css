@@ -120,12 +120,18 @@ h2 { font-size: 22px; line-height: 1.25; }
 .time-group[data-bucket="past"] .time-h { background: #efe9e2; color: var(--mut);
   border: 1px solid transparent; }
 .time-group[data-bucket="past"] .time-h .cnt { color: var(--mut); }
-.time-item { display: inline-flex; gap: 7px; align-items: center; flex-wrap: nowrap; }
-/* eventDateNote の注記 (2026-11-14 追加): 対象チップの直後に、チップ列と同じ
-   流れの中で小さく併記する。データ由来のラベルとして扱い (定義Cではチップ
-   構成要素側)、独立行にせず面積は最小にする。 */
-.ev-note { display: inline-flex; align-items: center; min-height: 20px;
-  font-size: 11.5px; line-height: 1.4; color: var(--mut); }
+/* 行内は折り返し可 (2026-11-14 widthfix): 末尾の注記 (.ev-note) が収まらない
+   幅では行の下へ回り込む。nowrap だと注記が行の右端の外へ押し出されて
+   見えなくなる幅があったため。max-width: 100% で行自体も親の幅を超えない。 */
+.time-item { display: inline-flex; gap: 7px; align-items: center;
+  flex-wrap: wrap; max-width: 100%; }
+/* eventDateNote の注記 (2026-11-14 追加、同日 widthfix で可読性と置き場を改修):
+   対象の行 (.time-item) の内側末尾に置き、行の幅の中で必ず見えるようにする。
+   以前の 11.5px・薄色 (--mut) は「小さく薄くて読めない」との指摘を受け、
+   本文として普通に読める大きさ (14px) と濃さ (--ink) に改めた。行間も確保する。
+   min-width: 0 は、 flex 子要素としての自動最小サイズでテキストの折り返しが
+   阻害され、行幅を超えてはみ出すのを防ぐため。 */
+.ev-note { min-width: 0; font-size: 14px; line-height: 1.5; color: var(--ink); }
 .pat-label { font-weight: 700; font-size: 16px; display: inline-flex; align-items: center; min-height: 44px; }
 .term { font: inherit; font-weight: 700; font-size: 16px; color: var(--ink); background: none;
   border: 0; border-bottom: 2px dotted var(--ember); min-height: 44px; padding: 4px 2px;
