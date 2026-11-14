@@ -30,7 +30,7 @@
         "精密機器",
         "機械"
       ],
-      "eventDateNote": "事例：11月17日（火）（エヌビディア決算）"
+      "eventDateNote": "事例：11月18日（水）（エヌビディア決算）"
     },
     {
       "id": "earnings-season",
@@ -688,6 +688,7 @@
         "start": "2026-05-01",
         "end": "2026-05-10",
         "patternIds": [
+          "fomc",
           "sq-week",
           "earnings-season",
           "sell-in-may",
@@ -1072,6 +1073,7 @@
         "start": "2026-12-11",
         "end": "2026-12-20",
         "patternIds": [
+          "fomc",
           "sq-week",
           "halloween",
           "midterm-cycle",
