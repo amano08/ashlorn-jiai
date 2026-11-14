@@ -287,6 +287,12 @@ function buildMain() {
       const whenChip = wl ? '<span class="when-chip">' + esc(wl) + '</span>' : '';
       const markChips = marksOf(p).map(mk => '<span class="mark-chip">' + esc(mk) + '</span>').join('');
       items += '<li class="time-item" data-pid="' + pid + '">' + termHtml(pid) + lv(chipLevel(pid)) + whenChip + markChips + '</li>';
+      // eventDateNote の文面そのものを小さい注記として直後に併記する (2026-11-14 追加)。
+      // どの会社の決算か等が画面から読めるようにするためで、文面は data.json の
+      // 既存文字列をそのまま使う (新しい文は作らない)。分類・チップ・並びは不変。
+      // 置き場はチップ列の流れの中 (独立行にすると FV の銘柄行が押し出されるため、
+      // 実測比較のうえ同列フロー方式を採用)。
+      if (p.eventDateNote) items += '<li class="ev-note" data-for="' + pid + '">' + esc(p.eventDateNote) + '</li>';
     }
     let plain = '';
     if (key === 'period') {
