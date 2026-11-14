@@ -58,6 +58,7 @@ body { font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; col
   white-space: nowrap; flex: none; }
 .date-line { font-size: 17px; font-weight: 700; margin-top: 2px; line-height: 1.4; }
 .date-line .jun { font-weight: 400; font-size: 15px; color: #57493d; }
+.market-note { margin-top: 2px; font-size: 15px; font-weight: 700; line-height: 1.5; color: var(--ember); }
 
 /* ---- 第1層: FV = 結論カード (面+左アクセントバー) ---- */
 .fv { margin-top: 8px; background: var(--card); border: 1px solid var(--line);
@@ -301,6 +302,22 @@ section[aria-label="業種ごとの定石"] { margin-top: 36px; }
      名前だけの平文列挙 (平文・操作なし) に替える。 */
   .time-group[data-bucket="period"] .time-item { display: none; }
   .period-plain { display: block; flex: 1 1 100%; font-size: 14px; line-height: 1.45; }
+  /* 休場・先行注記がある日 (2026-11-14): 注記1行ぶんの高さを余白の圧縮で
+     相殺し、§8 の FV ライン (先頭セクタ見出し・先頭銘柄行) を注記なしの
+     日と同じ水準に保つ。対象は注記表示時のみ (:has)。凍結部品には触らない。 */
+  .masthead:has(.market-note) { padding-top: 2px; padding-bottom: 2px; }
+  .market-note { margin-top: 0; line-height: 1.45; }
+  .wrap:has(.market-note) .fv { margin-top: 0; padding-top: 6px; }
+  .wrap:has(.market-note) .summary { margin-top: 0; }
+  .wrap:has(.market-note) .cnt-chips { margin-top: 1px; padding-top: 2px; }
+  .wrap:has(.market-note) section[aria-labelledby="time-h"] { margin-top: 2px; }
+  .wrap:has(.market-note) .time-groups { margin-top: 4px; gap: 4px; }
+  .wrap:has(.market-note) .time-h { padding-top: 0; padding-bottom: 0; }
+  .wrap:has(.market-note) .legend { margin-top: 2px; }
+  .wrap:has(.market-note) .origin-note { margin-top: 0; }
+  .wrap:has(.market-note) section[aria-label="業種ごとの定石"] { margin-top: 6px; }
+  .wrap:has(.market-note) .sec-rows { margin-top: 2px; }
+  .wrap:has(.market-note) .sec-row { padding-top: 2px; }
 }
 
 /* ================================================================

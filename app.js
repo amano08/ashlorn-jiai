@@ -200,13 +200,49 @@ function composeFact(groups, marksOf, specPids, bucketOf) {
   return clauses.join('');
 }
 
+/* ---------- 休場・先行表示の注記 (2026-11-14 追加) ----------
+   data.json は「対象日 (generatedFor)」の内容。訪問者の JST の今日と比べ、
+   generatedFor が未来の営業日のときだけ、FV の date-line 直下に最大1行出す。
+   判定材料は data.json 同梱の marketCalendar (JPX 休場日)。通常表示
+   (generatedFor = 今日) では何も出さない。 */
+function jstTodayIso() {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Asia/Tokyo', year: 'numeric', month: '2-digit', day: '2-digit',
+  }).formatToParts(new Date());
+  const v = {};
+  for (const p of parts) v[p.type] = p.value;
+  return v.year + '-' + v.month + '-' + v.day;
+}
+function isBusinessDay(iso) {
+  const d = parseDate(iso);
+  const wd = d.getDay();
+  if (wd === 0 || wd === 6) return false;
+  const byYear = (DATA.marketCalendar && DATA.marketCalendar.holidaysByYear) || {};
+  const list = byYear[String(d.getFullYear())];
+  return list ? !list.includes(iso) : true;
+}
+function wdLabel(d) { return WD[d.getDay() === 0 ? 6 : d.getDay() - 1]; }
+function marketNoteText(genStr) {
+  const visitorToday = jstTodayIso();
+  if (genStr <= visitorToday) return '';
+  const gd = parseDate(genStr);
+  const genMd = (gd.getMonth() + 1) + '月' + gd.getDate() + '日・' + wdLabel(gd);
+  if (!isBusinessDay(visitorToday)) {
+    const td = parseDate(visitorToday);
+    return '今日（' + (td.getMonth() + 1) + '月' + td.getDate() + '日）は休場日のため、次の営業日（' +
+      genMd + '）の地合いを表示しています。';
+  }
+  return '本日の市場は終了したため、次の営業日（' + genMd + '）の地合いを表示しています。';
+}
+
 /* ---------- メインビュー (モック build_page の移植) ---------- */
 let SEARCH_DATA = [];
 function buildMain() {
   const genStr = DATA.generatedFor;
   const today = parseDate(genStr);
   const y = today.getFullYear(), m = today.getMonth() + 1, dd = today.getDate();
-  const genLabel = y + '年' + m + '月' + dd + '日（' + WD[today.getDay() === 0 ? 6 : today.getDay() - 1] + '）';
+  const genLabel = y + '年' + m + '月' + dd + '日（' + wdLabel(today) + '）';
+  const marketNote = marketNoteText(genStr);
   const junItems = DATA.jun.items;
   const jun = junItems.find(j => j.start <= genStr && genStr <= j.end);
   const junLabel = jun.label;
@@ -391,6 +427,7 @@ function buildMain() {
 '  <div class="mast-row"><span class="site-name"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>地合い定石カレンダー</span>\n' +
 '    <span class="data-chip">データ時点：' + m + '月' + dd + '日</span></div>\n' +
 '  <div class="date-line">' + genLabel + '<span class="jun">・' + esc(junLabel) + '</span></div>\n' +
+(marketNote ? '  <p class="market-note">' + esc(marketNote) + '</p>\n' : '') +
 '</header>\n\n' +
 '<section class="fv" aria-label="今日の要点"' + (zero ? ' data-zero="1"' : '') + '>\n' +
 '  <h1>今日は、どんな株が動きやすい日？</h1>\n' +
