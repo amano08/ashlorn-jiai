@@ -469,6 +469,7 @@ bgTop + '\n\n' + block4Html + '\n\n' + bgBottom + '\n\n' +
 '  <p>傾向の提示です。将来の値動きの予測や保証ではなく、投資の助言でもありません。</p>\n' +
 '  <p>業種との関係には、まだ確かめられていない（未検証の）ものが含まれます。</p>\n' +
 '  <p>データ：地合い定石カレンダー（' + genLabel + '・' + esc(junLabel) + '時点）／ 価格・チャートは表示していません。</p>\n' +
+'  <p><a href="https://ashlorn.com/tools/jiai-viewer/">見方・注意点などの詳細</a> ／ <a href="https://ashlorn.com/">Studio Ashlorn</a></p>\n' +
 '</footer>\n</div>';
 }
 
@@ -484,6 +485,7 @@ function viewFoot() {
   return '</section>\n<footer class="foot">\n' +
     '  <p>傾向の提示です。将来の値動きの予測や保証ではなく、投資の助言でもありません。</p>\n' +
     '  <p>業種との関係には、まだ確かめられていない（未検証の）ものが含まれます。</p>\n' +
+    '  <p><a href="https://ashlorn.com/tools/jiai-viewer/">見方・注意点などの詳細</a> ／ <a href="https://ashlorn.com/">Studio Ashlorn</a></p>\n' +
     '</footer>\n</div>';
 }
 function buildPatterns() {
